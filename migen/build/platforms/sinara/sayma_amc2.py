@@ -170,6 +170,14 @@ _io = [
         Subsignal("p", Pins("AF6")),
         Subsignal("n", Pins("AF5"))
     ),
+    ("cdr_clk_clean", 1,
+        Subsignal("p", Pins("Y6")),
+        Subsignal("n", Pins("Y5"))
+    ),
+    ("cdr_clk_clean", 2,
+        Subsignal("p", Pins("P6")),
+        Subsignal("n", Pins("P5"))
+    ),
     ("cdr_clk_clean_fabric", 0,
         Subsignal("p", Pins("H12")),
         Subsignal("n", Pins("G12")),
@@ -226,8 +234,7 @@ _io = [
         Subsignal("rxn", Pins("AM1"))
     ),
     ("sfp_tx_disable", 1, Pins("AM12"), IOStandard("LVCMOS33")),
-    # Master SATA connector J16
-    ("sata", 0,
+    ("fat_pipe", 0,
         Subsignal("txp", Pins("AL4")),
         Subsignal("txn", Pins("AL3")),
         Subsignal("rxp", Pins("AK2")),
@@ -384,12 +391,12 @@ _io = [
     ("basemod0_led", 7, Pins("K11"), IOStandard("LVCMOS18")),
     
     ("basemod1_adc_spi_p", 0,
-        Subsignal("clk", Pins("G9")),
+        Subsignal("clk", Pins("E11")),
         Subsignal("miso", Pins("J9"), Misc("DIFF_TERM_ADV=TERM_100")),
         IOStandard("LVDS")
     ),
     ("basemod1_adc_spi_n", 0,
-        Subsignal("clk", Pins("F9")),
+        Subsignal("clk", Pins("D11")),
         Subsignal("miso", Pins("H9"), Misc("DIFF_TERM_ADV=TERM_100")),
         IOStandard("LVDS")
     ),
